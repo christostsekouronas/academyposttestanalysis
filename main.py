@@ -11,9 +11,7 @@ allConfigKeys = configLoader.loadConfig()
 
 data = dataLibrary.loadTest(allConfigKeys["datasetfile"])
 
-#
-# Print grade based on email
-#
+# Print grade based on surname
 #
 
 
