@@ -1,3 +1,8 @@
 {
-    "datasetfile": "./data/posttestdatasmall.csv"
+    "datasetfile": "./data/data-utf8.csv",
+    "hasheader": true,
+    "reportOnRead":false,
+    "PrintGradeBasedOnSurname":true,
+    "GradeBasedOnSurname":"Kvas"
 }
+
