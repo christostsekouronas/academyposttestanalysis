@@ -6,21 +6,31 @@
 
 import config as configLoader
 import loadCSVdata as dataLibrary
+import dataanalysis
 
 allConfigKeys = configLoader.loadConfig()
 
 data = dataLibrary.loadTest(allConfigKeys["datasetfile"])
 
-# Print grade based on surname
-import pandas as pd
+# data is type of DataFrame array. 
+# with loc function we get the N element of this array. 
+# In each element can be searched as Dictionary. Keys are the Column names of the csv file. 
 
-df = pd.read_csv('data-utf8.csv')
-
-print(df.head(10))
+# get number of rows using len function
 
 
-#if allConfigKeys["reportOnRead"]:
-    #print(data)
-#else:
-    #print("No report is configured")
+if allConfigKeys["PrintGradeBasedOnSurname"]:
+    grade = dataanalysis.getGradeBySurname(
+        data,
+        allConfigKeys["GradeBasedOnSurname"],
+        allConfigKeys["WhichAttempt"],
+    )
+    print(grade)
 
+if allConfigKeys["PrintGradeBasedOnName"]:
+    grade = dataanalysis.getGradeBySurname(
+        data,
+        allConfigKeys["GradeBasedOnSurname"],
+        allConfigKeys["WhichAttempt"],
+    )
+    print(grade)

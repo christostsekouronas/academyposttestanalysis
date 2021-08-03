@@ -1,8 +1,13 @@
 {
     "datasetfile": "./data/data-utf8.csv",
     "hasheader": true,
-    "reportOnRead":false,
+    "reportOnRead": false,
     "PrintGradeBasedOnSurname":true,
-    "GradeBasedOnSurname":"Kvas"
+    "PrintGradeBasedOnName": true,
+    "UseFilterWithANDlogic":true,
+    "GradeBasedOnSurname":"Paola",
+    "GradeBasedOnName": "Nikolas",
+    "WhichAttempt": "both"
+
 }
 
