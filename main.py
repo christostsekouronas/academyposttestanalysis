@@ -4,8 +4,22 @@
 # Load Data
 # Print Data
 
-import readCsv
+import config as configLoader
+import loadCSVdata as dataLibrary
 
-data = readCsv.loadTest()
-# print(data)
+allConfigKeys = configLoader.loadConfig()
+
+data = dataLibrary.loadTest(allConfigKeys["datasetfile"])
+
+#
+# Print grade based on email
+#
+#
+
+
+
+if allConfigKeys["reportOnRead"]:
+    print(data)
+else:
+    print("No report is configured")
 
